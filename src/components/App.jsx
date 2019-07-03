@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import MarketSchedule from './MarketSchedule';
 import AvailableProduce from './AvailableProduce';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         }
       `}</style>
       <Header/>
-      <MarketSchedule/>
-      <AvailableProduce/>
+      <Switch>
+        <Route exact path='/' component={MarketSchedule}/>
+        <Route path='/produce' component={AvailableProduce}/>
+      </Switch>
     </div>
   );
 }

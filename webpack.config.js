@@ -54,6 +54,16 @@ module.exports = {
             "styled-jsx/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
     ]
   },
@@ -63,7 +73,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Help Queue',
+      title: 'Avery&#39;s Organics',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

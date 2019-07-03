@@ -14,7 +14,7 @@ function Schedule(props){
       <h3>{props.day}</h3>
       <p>Location: {props.location}</p> 
       <p>Hours: {props.hours}</p> 
-      <p>booth: {props.booth}</p>          
+      <p>booth: {props.booth}</p>   
     </div>
   );
 }
